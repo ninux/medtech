@@ -7,140 +7,189 @@
 \subsection{Daten}
 % \pgfplotstabletypeset{data/blood_01.txt}
 
+\newpage
+\subsubsection{Gruppe A}
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}{0.48\textwidth}
-			\begin{tikzpicture}
-			\begin{axis}[
-				xlabel={Zeit [min]},
-				ylabel={Blutzucker [mmol/l]},
-				width=1\textwidth,
-				xmin=-5,
-				xmax=35,
-				ymin=4.2,
-				ymax=7.0
-			]
-				\addplot table [y=$W_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 1};
-				\addplot table [y=$W_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 2};
-				\addplot table [y=$W_3$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 3};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 1};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 2};
-				\addplot table [y=$Z_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 1};
-				\addplot table [y=$Z_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 2};
-				\addplot table [y=$S_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 1};
-				\addplot table [y=$S_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 2};
-			\end{axis}
-		\end{tikzpicture}
-
-	\end{subfigure}
-	\begin{subfigure}{0.48\textwidth}
+	\begin{subfigure}{0.45\textwidth}
 		\begin{tikzpicture}
 			\begin{axis}[
+				title={Wasser},
 				xlabel={Zeit [min]},
 				ylabel={Blutzucker [mmol/l]},
 				width=1\textwidth,
 				xmin=-5,
 				xmax=35,
-				ymin=4.2,
-				ymax=7.0
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
 			]
 				\addplot table [y=$W_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 1};
+				\addlegendentry{W 1a};
 				\addplot table [y=$W_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 2};
+				\addlegendentry{W 2a};
 				\addplot table [y=$W_3$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 3};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 1};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 2};
-				\addplot table [y=$Z_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 1};
-				\addplot table [y=$Z_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 2};
-				\addplot table [y=$S_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 1};
-				\addplot table [y=$S_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 2};
+				\addlegendentry{W 3a};
 			\end{axis}
 		\end{tikzpicture}
-
 	\end{subfigure}
-
-	\begin{subfigure}{0.48\textwidth}
+	\hfill{}
+	\begin{subfigure}{0.45\textwidth}
 		\begin{tikzpicture}
 			\begin{axis}[
+				title={Assugrin},
 				xlabel={Zeit [min]},
 				ylabel={Blutzucker [mmol/l]},
 				width=1\textwidth,
 				xmin=-5,
 				xmax=35,
-				ymin=4.2,
-				ymax=7.0
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
 			]
-				\addplot table [y=$W_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 1};
-				\addplot table [y=$W_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 2};
-				\addplot table [y=$W_3$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 3};
 				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 1};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 2};
-				\addplot table [y=$Z_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 1};
-				\addplot table [y=$Z_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 2};
-				\addplot table [y=$S_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 1};
-				\addplot table [y=$S_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 2};
+				\addlegendentry{A 1a};
+				\addplot table [y=$A_2$, x=t]{data/blood_01.txt};
+				\addlegendentry{A 2a};
 			\end{axis}
 		\end{tikzpicture}
-
 	\end{subfigure}
-	\begin{subfigure}{0.48\textwidth}
+
+	\begin{subfigure}{0.45\textwidth}
 		\begin{tikzpicture}
 			\begin{axis}[
+				title={Zucker},
 				xlabel={Zeit [min]},
 				ylabel={Blutzucker [mmol/l]},
 				width=1\textwidth,
 				xmin=-5,
 				xmax=35,
-				ymin=4.2,
-				ymax=7.0
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
 			]
-				\addplot table [y=$W_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 1};
-				\addplot table [y=$W_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 2};
-				\addplot table [y=$W_3$, x=t]{data/blood_01.txt};
-				\addlegendentry{Wasser 3};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 1};
-				\addplot table [y=$A_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Assugrin 2};
 				\addplot table [y=$Z_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 1};
+				\addlegendentry{Z 1a};
 				\addplot table [y=$Z_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Zucker 2};
-				\addplot table [y=$S_1$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 1};
-				\addplot table [y=$S_2$, x=t]{data/blood_01.txt};
-				\addlegendentry{Snickers 2};
+				\addlegendentry{Z 2a};
 			\end{axis}
 		\end{tikzpicture}
+	\end{subfigure}
+	\hfill{}
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Snickers},
+				xlabel={Zeit [min]},
+				ylabel={Blutzucker [mmol/l]},
+				width=1\textwidth,
+				xmin=-5,
+				xmax=35,
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
+			]
+				\addplot table [y=$S_1$, x=t]{data/blood_01.txt};
+				\addlegendentry{S 1a};
+				\addplot table [y=$S_2$, x=t]{data/blood_01.txt};
+				\addlegendentry{S 2a};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+\end{figure}
 
+\newpage
+\subsubsection{Gruppe B}
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Wasser},
+				xlabel={Zeit [min]},
+				ylabel={Blutzucker [mmol/l]},
+				width=1\textwidth,
+				xmin=-5,
+				xmax=35,
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
+			]
+				\addplot table [y=$W_1$, x=t]{data/blood_02.txt};
+				\addlegendentry{W 1b};
+				\addplot table [y=$W_2$, x=t]{data/blood_02.txt};
+				\addlegendentry{W 2b};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	\hfill{}
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Assugrin},
+				xlabel={Zeit [min]},
+				ylabel={Blutzucker [mmol/l]},
+				width=1\textwidth,
+				xmin=-5,
+				xmax=35,
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
+			]
+				\addplot table [y=$A_1$, x=t]{data/blood_02.txt};
+				\addlegendentry{A 1b};
+				\addplot table [y=$A_2$, x=t]{data/blood_02.txt};
+				\addlegendentry{A 2b};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Zucker},
+				xlabel={Zeit [min]},
+				ylabel={Blutzucker [mmol/l]},
+				width=1\textwidth,
+				xmin=-5,
+				xmax=35,
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
+			]
+				\addplot table [y=$Z_1$, x=t]{data/blood_02.txt};
+				\addlegendentry{Z 1b};
+				\addplot table [y=$Z_2$, x=t]{data/blood_02.txt};
+				\addlegendentry{Z 2b};
+				\addplot table [y=$Z_3$, x=t]{data/blood_02.txt};
+				\addlegendentry{Z 3b};
+
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	\hfill{}
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Snickers},
+				xlabel={Zeit [min]},
+				ylabel={Blutzucker [mmol/l]},
+				width=1\textwidth,
+				xmin=-5,
+				xmax=35,
+				ymin=3,
+				ymax=9,
+				ytick={3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0}
+			]
+				\addplot table [y=$S_1$, x=t]{data/blood_02.txt};
+				\addlegendentry{S 1b};
+				\addplot table [y=$S_2$, x=t]{data/blood_02.txt};
+				\addlegendentry{S 2b};
+				\addplot table [y=$S_3$, x=t]{data/blood_02.txt};
+				\addlegendentry{S 3b};
+
+			\end{axis}
+		\end{tikzpicture}
 	\end{subfigure}
 \end{figure}
 
