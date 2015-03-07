@@ -1,8 +1,38 @@
 \section{Blutzucker}
 
 \subsection{Kurzbeschreibung des Experiments}
+Zwei Probandengruppen nehmen vier verschiedene Nahrungsmittel ein.
+Vor der Nahrungszufuhr wird eine Blutzuckermessung erstellt. Die Messung
+wird alle 10min nach der Einnahme wiederholt. 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l l}
+		Nahrungsmittel & Dosierung \\
+		\hline
+		Wasser & ein Glas à 3dl \\
+		Assugrin & acht Einheiten à 55mg aufgelöst in 1.5dl Wasser \\
+		Zucker & sechs Einheiten à 4g aufgelöst in 1.5dl Wasser \\
+		Snickers & ein Riegel à 57g
+	\end{tabular}
+	\caption{Liste der verwendeten Nahrungsmittel}
+\end{table}
 
-\subsection{Hypothese}
+\subsection{Hypothesen und Modellannahmen}
+Für das vorliegende Experiment wird davon ausgegangen, dass alle Probanden
+gesund sind und einen normalen Metabolismus aufweisen. Hierzu gehört
+insbesondere die Annahme, dass kein Proband Diabetes hat.
+
+Die Hypothese für das Experiment besteht aus vier Aussagen:
+\begin{enumerate}[label=(\alph*)]
+	\item Die Blutzuckerwerte von Probanden mit gleicher
+		Nahrungsmittelaufnahme korrelieren stark.
+	\item Die Blutzuckerwerte von Probanden mit Wasser-Einnahme sind
+		konstant.
+	\item Die Blutzuckerwerte von Probanden mit Assugrin-Einnahme
+		sind fallend.
+	\item Die Blutzuckerwerte von Pronanden mit Zucker- und
+		Snickers-Einnahme sind steigend und korrelieren stark.
+\end{enumerate}
 
 \subsection{Daten}
 % \pgfplotstabletypeset{data/blood_01.txt}
@@ -187,10 +217,55 @@
 				\addlegendentry{S 2b};
 				\addplot table [y=$S_3$, x=t]{data/blood_02.txt};
 				\addlegendentry{S 3b};
-
 			\end{axis}
 		\end{tikzpicture}
 	\end{subfigure}
 \end{figure}
 
+\newpage
 \subsection{Ergebnis}
+Die erfassten Daten werden hinsichtlich der formulierten Modellannahmen
+und Hypothesen ausgewertet.
+
+\subsubsection{Hypothese (a)}
+Die Hypothese, dass Probanden mit gleicher Nahrungsmittelaufnahme eine
+starke Korrelation der Blutzuckerverläufe aufweist, kann mit den
+erfassten Daten bestätigt werden.
+
+Dieses Ergebnis deutet darauf hin, dass die Probanden der jewiligen
+Nahrungsmittelgruppe einen ähnlichen Metabolismus aufweisen und die
+eingenommenen Nahrungsmittel eine einschlägige Wirkung auf den
+Blutzuckerspiegel aufweisen.
+
+\subsubsection{Hypothese (b)}
+Die Hypothese, dass Probanden mit Wasser-Einnahme einen konstanten
+Blutzuckerspiegel aufweisen, kann mit den erfassten Daten bestätigt
+werden.
+
+Dieses Ergebnis deutet darauf hin, dass Wasser in der eingenommenen
+Menge (3dl) keine signifikante Auswirkung auf den Blutzuckerspiegel
+hat. 
+
+\subsubsection{Hypothese (c)}
+Die Hypothese, dass Probanden mit Assugrin-Einnahme einen fallenden
+Blutzuckerspiegel aufweisen, kann mit den erfassten Daten nicht
+bestätigt werden.
+
+Dieses Ergebnis deutet darauf hin, dass die Einnahme von Assugrin,
+ähnlich wie die Einnahme von Wasser, keine signifikante Auswirkung
+auf den Blutzuckerspiegel hat. Dieses Ergebnis ist plausibel, da
+Assugrin ein gemisch aus synthetischen Süssstoffen ist (Saccharin
+und Cyclamat) und von Personen mit Diabetes zum süssen verwendet
+wird.
+
+\subsubsection{Hypothese (d)}
+Die Hypothese, dass Probanden mit Zucker- und Snickers-Einnahme
+steigend sind und stark korrelieren, kann mit den erfassten Daten
+bestätigt werden.
+
+Die Blutzuckerverläufe der Probanden mit Zucker-Einnahme weist
+eine signifikant höhere Steigung auf als jene der Probanden,
+welche ein Snickers eingenommen hat. Dieses Resultat ist plausibel,
+da in Wasser aufgelöster Zucker schneller in den Blutkreislauf
+aufgenommen werden kann als der Zucker, welcher in einem Snickers
+enthalten ist.
