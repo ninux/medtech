@@ -1,0 +1,21 @@
+# ignore all ilias data
+/ilias
+
+# ignore all PDF
+*.pdf
+
+# ignore all LaTeX dumps
+*.aux
+*.bbl
+*.blg
+*.log
+*.toc
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.out
+*.xdy
+
+# ignore editor stuff
+*.swp
