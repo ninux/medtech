@@ -3,11 +3,11 @@ OBJ_DIR = ./obj
 
 .PHONY: all doc latex bib gloss clean
 
-all: latex gloss doc clean
+all: latex bib doc clean
 
 doc:
 	pdflatex $(DOCUMENT).tex
-	for i in {1..5}; do \
+	for i in {1..3}; do \
 		pdflatex $(DOCUMENT).tex; \
 	done
 	mv $(DOCUMENT).pdf $(OBJ_DIR)/.
@@ -15,9 +15,9 @@ doc:
 latex:
 	pdflatex $(DOCUMENT).tex
 
-# bib:
-# 	bibtex $(DOCUMENT).aux
-# 
+bib:
+	bibtex $(DOCUMENT).aux
+ 
 # gloss:
 #	makeglossaries $(DOCUMENT)
 
